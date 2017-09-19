@@ -1,0 +1,28 @@
+---
+title: "readme"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Filter txt dataset
+
+## Reading the data
+
+```{r}
+text1 <- read.table('./text1.txt', sep = '|', header = FALSE)
+text2 <- read.table('./text2.txt', sep = '|', header = FALSE)
+
+print(text1)
+print(text2)
+```
+
+## Filter
+
+
+```{r}
+finalData <- text1[text1$V1 %in% text2$V1, ]
+print(finalData)
+```
