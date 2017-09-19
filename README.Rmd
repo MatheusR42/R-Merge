@@ -1,19 +1,17 @@
 ---
-title: "readme"
-output: html_document
+title: "Filter txt dataset with R"
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Filter txt dataset
-
 ## Reading the data
 
 ```{r}
-text1 <- read.table('./text1.txt', sep = '|', header = FALSE)
-text2 <- read.table('./text2.txt', sep = '|', header = FALSE)
+text1 <- read.table('./text1.txt', sep = '|', header = FALSE, na.strings = "N/A")
+text2 <- read.table('./text2.txt', sep = '|', header = FALSE, na.strings = "N/A")
 
 print(text1)
 print(text2)
