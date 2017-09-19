@@ -21,6 +21,6 @@ print(text2)
 
 
 ```{r}
-finalData <- text1[text1$V1 %in% text2$V1, ]
-print(finalData)
+merged <- merge(text1, text2, by = "V1")
+print(merged)
 ```
